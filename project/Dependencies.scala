@@ -11,6 +11,7 @@ object Library {
     val vertx_lang_scala = "io.vertx" %% "vertx-lang-scala" % Version.Vertx
     val vertx_hazelcast = "io.vertx" % "vertx-hazelcast" % Version.Vertx
     val vertx_web = "io.vertx" %% "vertx-web-scala" % Version.Vertx
+    val mongodb = "org.mongodb.scala" %% "mongo-scala-driver" % "4.8.0"
 
     //non-vert.x deps
     val scalaTest = "org.scalatest" %% "scalatest" % Version.ScalaTest
