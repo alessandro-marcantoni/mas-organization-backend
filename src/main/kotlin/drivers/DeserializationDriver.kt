@@ -2,11 +2,10 @@ package drivers
 
 import entities.Entities.Cardinality
 import entities.Entities.Compatibility
-import entities.Entities.Constraint
 import entities.Entities.Group
 import entities.Entities.Role
-import entities.Entities.Structural
 import entities.Entities.Specification
+import entities.Entities.Structural
 import io.vertx.core.json.JsonObject
 import org.bson.types.ObjectId
 import org.litote.kmongo.id.toId
@@ -40,13 +39,9 @@ fun JsonObject.toGroup(): Group = Group(
     this.getInteger("max"),
     this.getJsonArray("subgroups").map { (it as JsonObject).toGroup() },
     this.getJsonArray("roles").map { (it as JsonObject).toRole() },
-    this.getJsonArray("constraints").map { (it as JsonObject).toConstraint() }
+    this.getJsonArray("cardinalities").map { (it as JsonObject).toCardinality() },
+    this.getJsonArray("compatibilities").map { (it as JsonObject).toCompatibility() },
 )
-
-fun JsonObject.toConstraint(): Constraint = when(this.containsKey("min")) {
-    true -> this.toCardinality()
-    else -> this.toCompatibility()
-}
 
 fun JsonObject.toCardinality(): Cardinality = Cardinality(
     this.getInteger("min"),

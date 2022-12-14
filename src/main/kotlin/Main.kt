@@ -1,2 +1,5 @@
-class Main {
+import io.vertx.core.Vertx
+
+fun main() {
+    Vertx.vertx().deployVerticle("http.HttpVerticle")
 }
