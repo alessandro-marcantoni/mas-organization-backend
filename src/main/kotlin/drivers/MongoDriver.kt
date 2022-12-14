@@ -1,12 +1,18 @@
 package drivers
 
+import com.mongodb.ConnectionString
 import entities.Entities.Specification
+import io.github.cdimascio.dotenv.dotenv
 import org.bson.types.ObjectId
 import org.litote.kmongo.*
 import org.litote.kmongo.id.toId
 
 class MongoDriver {
-    private val client = KMongo.createClient("mongodb://localhost:27017")
+    companion object {
+        val CONNECTION_STRING: String = dotenv()["MONGO_CONNECTION_STRING"]
+    }
+
+    private val client = KMongo.createClient(ConnectionString(CONNECTION_STRING))
     private val database = client.getDatabase("mas-organizations")
     private val specifications = database.getCollection<Specification>("specifications")
 
