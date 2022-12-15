@@ -7,3 +7,5 @@ build
 .idea
 
 .env
+
+.DS_Store
