@@ -2,27 +2,34 @@ package drivers
 
 import com.mongodb.ConnectionString
 import entities.Entities.Specification
-import io.github.cdimascio.dotenv.dotenv
+import kotlinx.coroutines.runBlocking
 import org.bson.types.ObjectId
-import org.litote.kmongo.*
+import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.id.toId
+import org.litote.kmongo.reactivestreams.KMongo
 
 class MongoDriver {
     companion object {
-        val CONNECTION_STRING: String = dotenv()["MONGO_CONNECTION_STRING"]
+        val CONNECTION_STRING: String = System.getenv("MONGO_CONNECTION_STRING") ?: "mongodb://localhost:27017"
     }
 
-    private val client = KMongo.createClient(ConnectionString(CONNECTION_STRING))
+    private val client = KMongo.createClient(ConnectionString(CONNECTION_STRING)).coroutine
     private val database = client.getDatabase("mas-organizations")
     private val specifications = database.getCollection<Specification>("specifications")
 
-    fun getSpecifications(): List<Specification> = specifications.find().toList()
+    fun getSpecifications(): List<Specification> = runBlocking {
+        specifications.find().toList()
+    }
 
-    fun addSpecification(s: Specification): Result<Unit> = kotlin.runCatching { specifications.save(s) }
+    fun addSpecification(s: Specification): Boolean = runBlocking {
+        specifications.save(s)?.wasAcknowledged() ?: false
+    }
 
-    fun updateSpecification(id: String, s: Specification): Boolean =
+    fun updateSpecification(id: String, s: Specification): Boolean = runBlocking {
         specifications.updateOneById(ObjectId(id).toId<Specification>(), s).wasAcknowledged()
+    }
 
-    fun deleteSpecification(id: String): Boolean =
+    fun deleteSpecification(id: String): Boolean = runBlocking {
         specifications.deleteOneById(ObjectId(id).toId<Specification>()).wasAcknowledged()
+    }
 }
