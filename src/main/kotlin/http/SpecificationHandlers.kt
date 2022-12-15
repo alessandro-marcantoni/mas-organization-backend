@@ -6,7 +6,6 @@ import drivers.toSpecification
 import io.vertx.core.Handler
 import io.vertx.ext.web.RoutingContext
 
-
 val getSpecificationsHandler: Handler<RoutingContext> = Handler { ctx ->
     ctx.response().end(db.getSpecifications().toJson().toString())
 }
