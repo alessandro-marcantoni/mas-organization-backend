@@ -11,7 +11,7 @@ import org.bson.types.ObjectId
 import org.litote.kmongo.id.toId
 
 fun JsonObject.toSpecification(): Specification = Specification(
-    when(this.containsKey("_id")) {
+    when (this.containsKey("_id")) {
         true -> ObjectId(this.getString("_id")).toId()
         false -> ObjectId().toId()
     },
