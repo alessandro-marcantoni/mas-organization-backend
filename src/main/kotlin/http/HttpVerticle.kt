@@ -19,10 +19,20 @@ class HttpVerticle : AbstractVerticle() {
             CorsHandler.create()
                 .allowedMethods(setOf(HttpMethod.GET, HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE))
         )
-        router.get("/specifications").handler(getSpecificationsHandler)
-        router.post("/specifications").handler(addSpecificationHandler)
-        router.put("/specifications/:id").handler(updateSpecificationHandler)
-        router.delete("/specifications/:id").handler(deleteSpecificationHandler)
+        specifications(router)
+        xmlSpecifications(router)
         return router
+    }
+
+    private fun specifications(router: Router) {
+        router.get("/specifications").handler(getSpecificationsHandler)
+        router.post("/specifications").consumes("application/json").handler(addSpecificationHandler)
+        router.put("/specifications/:id").consumes("application/json").handler(updateSpecificationHandler)
+        router.delete("/specifications/:id").handler(deleteSpecificationHandler)
+    }
+
+    private fun xmlSpecifications(router: Router) {
+        router.get("/specifications/:name").produces("application/xml").handler(getXmlSpecHandler)
+        router.post("/specifications/:name").consumes("application/xml").handler(addXmlSpecHandler)
     }
 }

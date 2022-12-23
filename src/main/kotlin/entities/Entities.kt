@@ -21,4 +21,6 @@ object Entities {
 
     data class Structural(val roles: List<Role>, val groups: List<Group>)
     data class Specification(@BsonId val id: Id<Specification>, val structural: Structural)
+
+    data class MoiseSpecification(val name: String, val content: String)
 }
