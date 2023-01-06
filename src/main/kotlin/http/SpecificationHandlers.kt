@@ -61,3 +61,15 @@ val getXmlSpecHandler: Handler<RoutingContext> = Handler { ctx ->
             .end(it?.content ?: "")
     }
 }
+
+val updateXmlSpecHandler: Handler<RoutingContext> = Handler { ctx ->
+    ctx.request().body()
+        .map { it.toString() }
+        .map { db.updateMoiseSpec(Entities.MoiseSpecification(ctx.pathParam("name"), it)) }
+        .onComplete {
+            when (it.succeeded()) {
+                true -> ctx.response().setStatusCode(200).end()
+                else -> ctx.response().setStatusCode(400).end()
+            }
+        }
+}
