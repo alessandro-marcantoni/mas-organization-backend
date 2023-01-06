@@ -43,4 +43,8 @@ class MongoDriver {
     fun getMoiseSpec(name: String): MoiseSpecification? = runBlocking {
         moiseSpecs.findOne(MoiseSpecification::name eq name)
     }
+
+    fun updateMoiseSpec(s: MoiseSpecification) = runBlocking {
+        moiseSpecs.updateOne(MoiseSpecification::name eq s.name, s)
+    }
 }
