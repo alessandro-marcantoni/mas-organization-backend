@@ -34,5 +34,6 @@ class HttpVerticle : AbstractVerticle() {
     private fun xmlSpecifications(router: Router) {
         router.get("/specifications/:name").produces("application/xml").handler(getXmlSpecHandler)
         router.post("/specifications/:name").consumes("application/xml").handler(addXmlSpecHandler)
+        router.put("/specifications/:name").consumes("application/xml").handler(updateXmlSpecHandler)
     }
 }
