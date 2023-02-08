@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.0.3...v1.1.0) (2023-02-08)
+
+
+### Bug Fixes
+
+* change docker images to address also arm architectures ([66b20b8](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/66b20b821f4c1cdeeff2adc9d4308e28a9614df3))
+
+
+### Features
+
+* handle xml specifications ([cef047c](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/cef047cb5906e252daa1fae2ad7ed35cc0bb2770))
+
 ## [1.0.3](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.0.2...v1.0.3) (2022-12-21)
 
 
