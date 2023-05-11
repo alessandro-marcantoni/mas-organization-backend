@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.litote.kmongo:kmongo-coroutine:4.9.0")
