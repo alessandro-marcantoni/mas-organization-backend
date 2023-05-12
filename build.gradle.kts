@@ -15,7 +15,7 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.litote.kmongo:kmongo-coroutine:4.9.0")
-    implementation("io.vertx:vertx-core:4.4.1")
+    implementation("io.vertx:vertx-core:4.4.2")
     implementation("io.vertx:vertx-lang-kotlin:4.4.1")
     implementation("io.vertx:vertx-web:4.4.1")
     implementation("org.litote.kmongo:kmongo-async:4.9.0")
