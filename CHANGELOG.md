@@ -1,3 +1,10 @@
+## [1.1.23](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.22...v1.1.23) (2023-07-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.litote.kmongo:kmongo-async to v4.10.0 ([0529546](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/05295465ec8811ec37a20e5937d1df32bcc631d2))
+
 ## [1.1.22](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.21...v1.1.22) (2023-06-23)
 
 
