@@ -18,7 +18,7 @@ dependencies {
     implementation("io.vertx:vertx-core:4.4.4")
     implementation("io.vertx:vertx-lang-kotlin:4.4.4")
     implementation("io.vertx:vertx-web:4.4.4")
-    implementation("org.litote.kmongo:kmongo-async:4.9.0")
+    implementation("org.litote.kmongo:kmongo-async:4.10.0")
 }
 
 application {
