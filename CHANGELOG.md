@@ -1,3 +1,10 @@
+## [1.1.25](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.24...v1.1.25) (2023-08-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.6.0 ([c9a5125](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/c9a51253d129fefadddf6ab397d064279802752a))
+
 ## [1.1.24](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.23...v1.1.24) (2023-07-25)
 
 
