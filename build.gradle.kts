@@ -14,7 +14,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.litote.kmongo:kmongo-coroutine:4.10.0")
+    implementation("org.litote.kmongo:kmongo-coroutine:4.11.0")
     implementation("io.vertx:vertx-core:4.4.6")
     implementation("io.vertx:vertx-lang-kotlin:4.4.6")
     implementation("io.vertx:vertx-web:4.4.6")
