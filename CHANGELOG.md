@@ -1,3 +1,10 @@
+## [1.1.45](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.44...v1.1.45) (2024-02-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.vertx:vertx-web to v4.5.3 ([79575ce](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/79575ce899d95efe5e716988c40e14fca7f2a04c))
+
 ## [1.1.44](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.43...v1.1.44) (2024-01-31)
 
 
