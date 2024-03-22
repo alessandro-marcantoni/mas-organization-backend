@@ -1,3 +1,10 @@
+## [1.1.56](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.55...v1.1.56) (2024-03-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.vertx:vertx-lang-kotlin to v4.5.6 ([02da896](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/02da896bf6b086cb17b7da05edca6a7a31db938f))
+
 ## [1.1.55](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.54...v1.1.55) (2024-03-22)
 
 
