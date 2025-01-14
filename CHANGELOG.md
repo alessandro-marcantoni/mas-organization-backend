@@ -1,3 +1,10 @@
+## [1.1.83](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.82...v1.1.83) (2025-01-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.litote.kmongo:kmongo-coroutine to v5.2.1 ([#238](https://github.com/alessandro-marcantoni/mas-organization-backend/issues/238)) ([8716f49](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/8716f499b2b6a957196b3d1e53160b237b526e86))
+
 ## [1.1.82](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.81...v1.1.82) (2025-01-13)
 
 
