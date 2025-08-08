@@ -1,4 +1,4 @@
-FROM gradle:8.14.3-jdk17 AS builder
+FROM gradle:9.0.0-jdk17 AS builder
 COPY --chown=gradle:gradle . /mas-organization-backend/
 WORKDIR /mas-organization-backend/
 RUN gradle build --no-daemon
