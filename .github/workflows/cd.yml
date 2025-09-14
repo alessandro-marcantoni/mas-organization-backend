@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Semantic Versioning
-        uses: anitvam/conventionalcommit-semantic-releasing@v0.7.81
+        uses: anitvam/conventionalcommit-semantic-releasing@v0.7.83
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
