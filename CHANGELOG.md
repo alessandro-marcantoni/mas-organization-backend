@@ -1,3 +1,10 @@
+## [1.1.167](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.166...v1.1.167) (2026-09-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency io.vertx:vertx-core to v5.2.0 ([#449](https://github.com/alessandro-marcantoni/mas-organization-backend/issues/449)) ([6ca34d6](https://github.com/alessandro-marcantoni/mas-organization-backend/commit/6ca34d6fee9046fa3cb53ba80f4e7ba861cf62f6))
+
 ## [1.1.166](https://github.com/alessandro-marcantoni/mas-organization-backend/compare/v1.1.165...v1.1.166) (2026-09-14)
 
 
